@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller">
+  <tabs>
+    <Tab text="Main">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <MenuBar layoutY="2.0" prefHeight="24.0" prefWidth="600.0" AnchorPane.bottomAnchor="347.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <menus>
+                      <Menu mnemonicParsing="false" text="File">
+                        <items>
+                          <MenuItem fx:id="openFile" mnemonicParsing="false" onAction="#fileChoose" text="Open Image" />
+                        </items>
+                      </Menu>
+                      <Menu mnemonicParsing="false" text="Exit">
+                        <items>
+                          <MenuItem mnemonicParsing="false" text="Close Program" />
+                        </items>
+                      </Menu>
+                    </menus>
+                  </MenuBar>
+                  <ImageView fx:id="originalImage" fitHeight="266.0" fitWidth="312.0" layoutX="274.0" layoutY="91.0" pickOnBounds="true" preserveRatio="true" />
+                  <Label layoutX="390.0" layoutY="41.0" prefHeight="27.0" prefWidth="96.0" text="Chosen Image" />
+               </children></AnchorPane>
+      </content>
+    </Tab>
+    <Tab text="Images">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <ImageView fx:id="blackWhiteImage" fitHeight="193.0" fitWidth="266.0" layoutX="39.0" layoutY="135.0" pickOnBounds="true" preserveRatio="true" />
+               </children></AnchorPane>
+      </content>
+    </Tab>
+  </tabs>
+</TabPane>
